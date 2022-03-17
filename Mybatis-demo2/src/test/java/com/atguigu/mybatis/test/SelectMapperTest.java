@@ -26,4 +26,25 @@ public class SelectMapperTest {
         SelectMapper mapper = sqlSession.getMapper(SelectMapper.class);
         System.out.println(mapper.getCount());
     }
+
+    @Test
+    public void testGetUserByIdToMap(){
+        SqlSession sqlSession= SqlSessionUtils.getSqlSession();
+        SelectMapper mapper = sqlSession.getMapper(SelectMapper.class);
+        System.out.println(mapper.getUserByIdToMap(1));
+    }
+
+    @Test
+    public void testGetAllUserToMap(){
+        SqlSession sqlSession= SqlSessionUtils.getSqlSession();
+        SelectMapper mapper = sqlSession.getMapper(SelectMapper.class);
+        System.out.println(mapper.getAllUserToMap());
+    }
+
+    @Test
+    public void testGetAllUserMap(){
+        SqlSession sqlSession= SqlSessionUtils.getSqlSession();
+        SelectMapper mapper = sqlSession.getMapper(SelectMapper.class);
+        System.out.println(mapper.getAllUserMap());
+    }
 }
